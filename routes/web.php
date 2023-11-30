@@ -36,4 +36,4 @@ Route::middleware([
 //Category Routes
 Route::get('/all/category',[CategoryController::class, 'index'])->name('AllCat');
 
-Route::post('create','CategoryController@insert');
+Route::resource('categories', CategoryController::class);
